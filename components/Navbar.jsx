@@ -1,6 +1,9 @@
 import Link from 'next/link'
-import  React, { useState } from 'react'
 import Image from 'next/image'
+import  React, { useState } from 'react'
+import { ImLocation } from 'react-icons/im';
+
+
 // import {motion} from 'framer-motion'
 
 export const Navbar = () => {
@@ -13,10 +16,10 @@ export const Navbar = () => {
     return (
     
       <>
-      <div className="flex md:justify-between sm:justify-center bg-blue-500 sm:text-center text-white text-xs tracking-widest uppercase py-3 px-12">
-        <p className="sm:hidden md:block">Cool Vision Tetovo</p>
-        <p className="md:mr-32 sm:m-0">Original Eyewear Since 1995</p>
-        <p className="sm:hidden md:block">EN</p>
+      <div className="flex md:justify-between justify-center bg-blue-500 sm:text-center text-white text-xs tracking-widest uppercase py-3 px-12">
+        <p className="hidden md:block">Cool Vision Tetovo</p>
+        <p className="md:mr-32 m-0">Original Eyewear Since 1995</p>
+        <p className="hidden md:block">EN</p>
       </div>
       <nav className='flex items-center justify-between  bg-gray-100 py-2 px-12'>
         <button type="button" className="block lg:hidden  focus:outline-none" onClick={handleClick}>
@@ -29,7 +32,7 @@ export const Navbar = () => {
               )}
           </svg>
         </button>
-        <div className="flex flex-row sm:hidden lg:block flex-2 text-blue-500 tracking-widest uppercase text-sm"> 
+        <div className="flex flex-row hidden lg:block flex-2 text-blue-500 tracking-widest uppercase text-sm"> 
           <Link href="/">
             <a className="items-center mr-5">
               Optike
@@ -58,7 +61,7 @@ export const Navbar = () => {
           </Link>
         </div>  
         
-        <div className="flex-2 sm:hidden md:block text-blue-500 text-right tracking-widest uppercase text-sm">
+        <div className="flex-2 hidden md:block text-blue-500 text-right tracking-widest uppercase text-sm">
           <Link href="/" className="">
             <a className="items-center mr-5 ">
               Kontakt
@@ -68,6 +71,9 @@ export const Navbar = () => {
             <a className="items-center">
               Rezervo
             </a>
+          </Link>
+          <Link href="/">
+                <ImLocation/>
           </Link>
         </div>
         
