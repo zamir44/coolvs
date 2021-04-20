@@ -12,6 +12,7 @@
     "prod:build": "NODE_ENV=production yarn run build:css && yarn run build"
   },
   "dependencies": {
+    "@headlessui/react": "^1.0.0",
     "@types/react-transition-group": "^4.4.1",
     "autoprefixer": "^10.1.0",
     "browserslist": "^4.16.4",

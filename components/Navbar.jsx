@@ -2,12 +2,14 @@ import Link from 'next/link'
 import Image from 'next/image'
 import  React, { useState } from 'react'
 import { ImLocation } from 'react-icons/im';
+import { Transition } from "@headlessui/react";
 
 
 // import {motion} from 'framer-motion'
 
 export const Navbar = () => {
   const [isOpen, setisOpen] = React.useState(false);
+  const [isShowing, setIsShowing] = useState(false);
 
   function handleClick() {
     setisOpen(!isOpen);
@@ -22,7 +24,7 @@ export const Navbar = () => {
         <p className="hidden md:block">EN</p>
       </div>
       <nav className='flex items-center justify-between  bg-gray-100 py-2 px-12'>
-        <button type="button" className="block lg:hidden  focus:outline-none" onClick={handleClick}>
+        <button type="button" className="block lg:hidden  focus:outline-none" onClick={handleClick} onclick={() => setIsShowing(!isShowing)}>
           <svg className="h-6 w-6 fill-current " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               {isOpen && (
               <path fillRule="evenodd" clipRule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z" />
@@ -32,6 +34,7 @@ export const Navbar = () => {
               )}
           </svg>
         </button>
+        
         <div className="flex flex-row hidden lg:block flex-2 text-blue-500 tracking-widest uppercase text-sm"> 
           <Link href="/">
             <a className="items-center mr-5">
@@ -61,38 +64,50 @@ export const Navbar = () => {
           </Link>
         </div>  
         
-        <div className="flex-2 hidden md:block text-blue-500 text-right tracking-widest uppercase text-sm">
+        <div className="flex-2 hidden lg:block text-blue-500 text-right tracking-widest uppercase text-sm">
+        
           <Link href="/" className="">
             <a className="items-center mr-5 ">
               Kontakt
             </a>
           </Link>
           <Link href="/">
-            <a className="items-center">
+            <a className="items-center mr-4">
               Rezervo
             </a>
+            
           </Link>
-          <Link href="/">
-                <ImLocation/>
-          </Link>
+          
+          
         </div>
-        
+        <ImLocation/>
         
       </nav>
 
-      <div className={`${  isOpen ? "block, transition-all" : "hidden" } lg:hidden`}>
+      <div className={`${  isOpen ? "block" : "hidden" } lg:hidden`}>
       
+       
+        <Transition
+          show={isShowing}
+          enter="transition ease-out duration-100"
+          enterFrom="transform opacity-0 scale"
+          enterTo="transform opacity-100"
+          leave="transition ease-in duration-75"
+          leaveFrom="transform opacity-100 scale-100"
+          leaveTo="transform opacity-0 scale-95" 
+        >
         <ul className={`md:flex flex-col w-80 h-screen bg-blue-400 text-white uppercase tracking-widest text-sm absolute left-0 top-0`}>
-        <button type="button" className="block lg:hidden absolute left-5 top-5 focus:outline-none" onClick={handleClick}>
-          <svg className="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              {isOpen && (
-              <path fillRule="evenodd" clipRule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z" />
-              )}
-              {!isOpen && (
-              <path fillRule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
-              )}
-          </svg>
-        </button>
+        
+          <button type="button" className="block lg:hidden absolute left-5 top-5 focus:outline-none" onClick={handleClick} onclick={() => setIsShowing(!isShowing)}>
+            <svg className="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                {isOpen && (
+                <path fillRule="evenodd" clipRule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z" />
+                )}
+                {!isOpen && (
+                <path fillRule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
+                )}
+            </svg>
+          </button>
           <p className="absolute right-5 top-5">EN</p>
           <li className="p-3 mt-20 ml-4">Optike</li>
           <li className="p-3 ml-4">Dielli</li>
@@ -100,6 +115,16 @@ export const Navbar = () => {
           <li className="p-3 ml-4">Kontakt</li>
           <li className="p-3 ml-4">Rezervo</li>
         </ul>
+        </Transition>
+      </div>
+      <div>
+        <Image
+        src="/../public/images/Guess_3000x1688mm28@2x.jpeg"
+        alt="Picture of the author"
+        height={900}
+        width={2000}
+        classsn
+        />
       </div>
     </>
       
