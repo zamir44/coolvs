@@ -18,7 +18,7 @@ export const Navbar = () => {
     return (
     
       <>
-      <div className="flex md:justify-between justify-center bg-blue-500 sm:text-center text-white text-xs tracking-widest uppercase py-3 px-12">
+      <div className="flex md:justify-between justify-center bg-blue-500 sm:text-center text-white text-xs tracking-widest uppercase py-4 px-12">
         <p className="hidden md:block">Cool Vision Tetovo</p>
         <p className="md:mr-32 m-0">Original Eyewear Since 1995</p>
         <p className="hidden md:block">EN</p>
@@ -117,14 +117,15 @@ export const Navbar = () => {
         </ul>
         </Transition>
       </div>
-      <div>
+      <div className="">
         <Image
-        src="/../public/images/Guess_3000x1688mm28@2x.jpeg"
+        src="/../public/images/SLIDER-mpjn-FINAL_2000x.jpg"
         alt="Picture of the author"
         height={900}
         width={2000}
-        classsn
+        className="h-screen"  
         />
+        
       </div>
     </>
       
