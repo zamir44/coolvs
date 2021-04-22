@@ -64,7 +64,7 @@ export const Navbar = () => {
           </Link>
         </div>  
         
-        <div className="flex-2 hidden lg:block text-blue-500 text-right tracking-widest uppercase text-sm">
+        <div className="flex-2 hidden lg:inline-block text-blue-500 text-right tracking-widest uppercase text-sm">
         
           <Link href="/" className="">
             <a className="items-center mr-5 ">
@@ -78,9 +78,9 @@ export const Navbar = () => {
             
           </Link>
           
-          
+          <ImLocation className="inline-block"/>
         </div>
-        <ImLocation/>
+        
         
       </nav>
 
