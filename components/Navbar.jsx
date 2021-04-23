@@ -5,11 +5,11 @@ import { ImLocation } from 'react-icons/im';
 import { Transition } from "@headlessui/react";
 
 
-// import {motion} from 'framer-motion'
+
 
 export const Navbar = () => {
   const [isOpen, setisOpen] = React.useState(false);
-  const [isShowing, setIsShowing] = useState(false);
+ 
 
   function handleClick() {
     setisOpen(!isOpen);
@@ -24,7 +24,7 @@ export const Navbar = () => {
         <p className="hidden md:block">EN</p>
       </div>
       <nav className='flex items-center justify-between  bg-gray-100 py-2 px-12'>
-        <button type="button" className="block lg:hidden  focus:outline-none" onClick={handleClick} onclick={() => setIsShowing(!isShowing)}>
+        <button type="button" className="block lg:hidden  focus:outline-none" onClick={handleClick}>
           <svg className="h-6 w-6 fill-current " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               {isOpen && (
               <path fillRule="evenodd" clipRule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z" />
@@ -55,16 +55,19 @@ export const Navbar = () => {
 
         <div className="text-center">
           <Link href="/">
+          <a>
           <Image
           src="/../public/logo.jpg"
           alt="Picture of the author"
           width={200}
           height={70}
           />
+          </a>
           </Link>
+          
         </div>  
         
-        <div className="flex-2 hidden lg:inline-block text-blue-500 text-right tracking-widest uppercase text-sm">
+        <div className="flex-2 hidden lg:inline-block  text-blue-500 text-right tracking-widest uppercase text-sm">
         
           <Link href="/" className="">
             <a className="items-center mr-5 ">
@@ -72,7 +75,7 @@ export const Navbar = () => {
             </a>
           </Link>
           <Link href="/">
-            <a className="items-center mr-4">
+            <a className="items-center mr-4 ">
               Rezervo
             </a>
             
@@ -85,20 +88,10 @@ export const Navbar = () => {
       </nav>
 
       <div className={`${  isOpen ? "block" : "hidden" } lg:hidden`}>
-      
-       
-        <Transition
-          show={isShowing}
-          enter="transition ease-out duration-100"
-          enterFrom="transform opacity-0 scale"
-          enterTo="transform opacity-100"
-          leave="transition ease-in duration-75"
-          leaveFrom="transform opacity-100 scale-100"
-          leaveTo="transform opacity-0 scale-95" 
-        >
+        
         <ul className={`md:flex flex-col w-80 h-screen bg-blue-400 text-white uppercase tracking-widest text-sm absolute left-0 top-0`}>
         
-          <button type="button" className="block lg:hidden absolute left-5 top-5 focus:outline-none" onClick={handleClick} onclick={() => setIsShowing(!isShowing)}>
+          <button type="button" className="block lg:hidden absolute left-5 top-5 focus:outline-none" onClick={handleClick} >
             <svg className="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 {isOpen && (
                 <path fillRule="evenodd" clipRule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z" />
@@ -115,7 +108,7 @@ export const Navbar = () => {
           <li className="p-3 ml-4">Kontakt</li>
           <li className="p-3 ml-4">Rezervo</li>
         </ul>
-        </Transition>
+      
       </div>
       <div className="">
         <Image
