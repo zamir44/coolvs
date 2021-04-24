@@ -89,7 +89,7 @@ export const Navbar = () => {
 
       <div className={`${  isOpen ? "block" : "hidden" } lg:hidden`}>
         
-        <ul className={`md:flex flex-col w-80 h-screen bg-blue-400 text-white uppercase tracking-widest text-sm absolute left-0 top-0`}>
+        <ul className={`md:flex flex-col w-80 h-screen bg-blue-400 text-white uppercase tracking-widest text-sm absolute left-0 top-0 z-50`}>
         
           <button type="button" className="block lg:hidden absolute left-5 top-5 focus:outline-none" onClick={handleClick} >
             <svg className="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -108,17 +108,14 @@ export const Navbar = () => {
           <li className="p-3 ml-4">Kontakt</li>
           <li className="p-3 ml-4">Rezervo</li>
         </ul>
-      
       </div>
-      <div className="">
-        <Image
-        src="/../public/images/SLIDER-mpjn-FINAL_2000x.jpg"
-        alt="Picture of the author"
-        height={900}
-        width={2000}
-        className="h-screen"  
-        />
-        
+      <div className="relative z-10">
+      <Image
+      src="/../public/images/SLIDER-mpjn-FINAL_2000x.jpg"
+      alt="Picture of the author"
+      height={900}
+      width={2000}
+      />
       </div>
     </>
       

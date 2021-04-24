@@ -5,14 +5,12 @@ module.exports = {
   theme: {
     extend: {
       flex: {
-        2: '1 0 0'
+        2: '1 0 0',
+        3: '1 1 50%'
       },
       colors: {
         cyan: '#9cdbff',
       },
-      backgroundImage: {
-        'gradient-to-dark': 'linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) )'
-      } 
     },
   },
   plugins: [],

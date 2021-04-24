@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import Main from '../components/Main'
+import Showcase from '../components/Showcase'
+import Footer from '../components/Footer'
 
 export default function Home() {
   return (
@@ -11,8 +13,10 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.gstatic.com"/>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet"></link>
       </Head>
-      <Navbar/>
-      <Main/>
+      <Navbar />
+      <Main />
+      <Showcase />
+      <Footer />
     </div>
   )
 }
