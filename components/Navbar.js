@@ -56,41 +56,33 @@ export const Navbar = () => {
         <div className="text-center">
           <Link href="/">
           <a>
-          <Image
-          src="/../public/logo.jpg"
-          alt="Picture of the author"
-          width={200}
-          height={70}
-          />
+            <Image
+            src="/../public/logo.jpg"
+            alt="Picture of the author"
+            width={200}
+            height={70}
+            />
           </a>
           </Link>
-          
         </div>  
         
         <div className="flex-2 hidden lg:inline-block  text-blue-500 text-right tracking-widest uppercase text-sm">
-        
           <Link href="/" className="">
             <a className="items-center mr-5 ">
               Kontakt
             </a>
           </Link>
           <Link href="/">
-            <a className="items-center mr-4 ">
+            <a className="items-center">
               Rezervo
             </a>
-            
           </Link>
-          
-          <ImLocation className="inline-block"/>
         </div>
-        
-        
+        <ImLocation className="block lg:inline-block text-blue-500"/>
       </nav>
 
       <div className={`${  isOpen ? "block" : "hidden" } lg:hidden`}>
-        
         <ul className={`md:flex flex-col w-80 h-screen bg-blue-400 text-white uppercase tracking-widest text-sm absolute left-0 top-0 z-50`}>
-        
           <button type="button" className="block lg:hidden absolute left-5 top-5 focus:outline-none" onClick={handleClick} >
             <svg className="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 {isOpen && (
@@ -102,20 +94,32 @@ export const Navbar = () => {
             </svg>
           </button>
           <p className="absolute right-5 top-5">EN</p>
-          <li className="p-3 mt-20 ml-4">Optike</li>
-          <li className="p-3 ml-4">Dielli</li>
-          <li className="p-3 ml-4">Aksesorw</li>
-          <li className="p-3 ml-4">Kontakt</li>
-          <li className="p-3 ml-4">Rezervo</li>
+          <li className="p-3 mt-20 ml-4 border-b w-4/5 border-gray-100 border-opacity-40">Optike</li>
+          <li className="p-3 ml-4 border-b w-4/5 border-gray-100 border-opacity-30">Dielli</li>
+          <li className="p-3 ml-4 border-b w-4/5 border-gray-100 border-opacity-30">Aksesorw</li>
+          <li className="p-3 ml-4 border-b w-4/5 border-gray-100 border-opacity-30">Kontakt</li>
+          <li className="p-3 ml-4 border-b w-4/5 border-gray-100 border-opacity-30">Rezervo</li>
         </ul>
       </div>
-      <div className="relative z-10">
-      <Image
-      src="/../public/images/SLIDER-mpjn-FINAL_2000x.jpg"
-      alt="Picture of the author"
-      height={900}
-      width={2000}
-      />
+      <div className="hidden md:block relative z-10">
+          <Image
+          src="/../public/images/SLIDER-mpjn-FINAL_2000x.jpg"
+          alt="Picture of the author"
+          height={900}
+          width={2000}
+          />
+      </div>
+      <div className="md:hidden">
+        <Image
+        src="/../public/images/hero-mobile.jpg"
+        alt="Picture of the author"
+        layout="intrinsic"
+        height="650"
+        width="750"
+        />
+      </div>
+      
+      <div>
       </div>
     </>
       
