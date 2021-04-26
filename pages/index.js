@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar'
 import Main from '../components/Main'
 import Showcase from '../components/Showcase'
 import Footer from '../components/Footer'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Home() {
   return (

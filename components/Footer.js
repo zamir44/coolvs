@@ -26,7 +26,7 @@ const Footer = () => {
                         </ul>
                         <ul className="text-sm lg:text-base flex flex-row items-center leading-8">
                             <li><FiPhone className="text-base lg:text-lg mr-4"/></li>
-                            <li><a href="tel: [389] 75 30 20 50" >[389] 75 30 20 50</a></li>
+                            <li className=""><a href="tel: [389] 75 30 20 50" className="hover:no-underline hover:text-blue-800  text-white">[389] 75 30 20 50</a></li>
                         </ul>                      
                     </ul>
                 </div>
@@ -36,11 +36,11 @@ const Footer = () => {
                 <ul className="mx-auto lg:text-lg text-sm leading-8">
                     <li className="lg:text-xl text-lg font-semibold mb-3">Social Media</li>
                         <ul className="text-small lg:text-base  flex items-center flex-row ">
-                            <li><a href="https://www.instagram.com/optikacoolvision/"><FaInstagram className="text-base lg:text-lg mr-4"/></a></li>
+                            <li><a href="https://www.instagram.com/optikacoolvision/"><FaInstagram className="text-base lg:text-lg hover:text-white text-white mr-4 "/></a></li>
                             <li>@optikacoolvision</li>
                         </ul>
                         <ul className="text-small lg:text-base flex flex-row items-center">
-                            <li><a href="https://www.facebook.com/OptikaCoolVisionVero3"><SiFacebook className="mr-4"/></a></li>
+                            <li><a href="https://www.facebook.com/OptikaCoolVisionVero3"><SiFacebook className="mr-4 hover:text-white text-white"/></a></li>
                             <li>Optika CoolVision</li>
                         </ul>
                 </ul>
