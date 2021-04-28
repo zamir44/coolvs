@@ -2,22 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-.avatar {
-  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
-  content: ' ';
+.button-before a {
+  background-color: transparent;
+  color: #fff;
+  padding: 1.2rem 8rem;
+  border: 1px solid #fff;
+  display: block;
+  background-image: linear-gradient(to left, transparent, transparent 50%,#fff 50%,#fff);
+  background-position: 100% 0;
+  background-size: 200% 100%;
+  transition: all .25s ease-in;
+  -webkit-transition: all .25s ease-in;
+  -moz-transition: all .25s ease-in;
+  -ms-transition: all .25s ease-in;
+  -o-transition: all .25s ease-in;
 }
 
-
-.overlay {
-  position: absolute; /* Sit on top of the page content */
-  display: none; /* Hidden by default */
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer; /* Add a pointer on hover */
+.button-before a:hover {
+  background-position: 0 0;
+  background-color: transparent;
+  opacity: 0.9;
+  color: #000;
+  -webkit-transition: all .35s ease;
+  -o-transition: all .35s ease;
+  transition: all .35s ease;
+  text-decoration: none;
 }
+

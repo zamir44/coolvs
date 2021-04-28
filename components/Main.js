@@ -7,7 +7,7 @@ function Main() {
         <>
             
 
-            <div className=" mx-auto py-10">
+            <div className="mx-auto py-10">
                 <p className="text-center text-lg my-20">Optike, Dielli, Aksesorw</p>
                 <div className="md:hidden">
                 <div className="w-full max-w-max mx-auto relative ">
@@ -16,15 +16,16 @@ function Main() {
                         <div className="w-full absolute inset-0 bg-gradient-to-t from-black opacity-100 z-10"></div>
                         <Image
                         href="/"
-                        src="/../public/mobile-images/Optic-mobile.PNG"
+                        src="/../public/mobile-images/sun-mobile.PNG"
                         alt="Picture of the author"
                         layout="intrinsic"
                         width="400"
-                        height=""
+                        height="256"
+                        objectFit="cover"
                         quality="100"
                         />
-                        <div className="absolute inset-y-11 inset-x-20 z-20 flex justify-around">
-                            <button type="button" className="bg-white text-black w-full opacity-80 uppercase font-bold tracking-wide">optike</button>
+                        <div className="absolute inset-y-16 inset-x-20 z-20 flex justify-around">
+                            <button type="button" className="bg-white text-black w-full opacity-80 uppercase font-bold tracking-wide">dielli</button>
                         </div>
                         </a>
                     </Link>
@@ -35,15 +36,16 @@ function Main() {
                 <a>
                     <div className="w-full h-full absolute inset-0 bg-gradient-to-t from-black opacity-100 z-10"></div>
                     <Image
-                        src="/../public/mobile-images/Sunglasses-mobile.PNG"
+                        src="/../public/mobile-images/optike-mobile.PNG"
                         alt="Picture of the author"
                         layout="intrinsic"
                         width="400"
-                        height="[100%]"
+                        height="256"
                         quality="100"
+                        objectFit="cover"
                     />
-                    <div className="absolute inset-y-11 inset-x-20 z-20 flex justify-around">
-                        <button type="button" className="bg-white text-black w-full whitespace-normal opacity-80 uppercase font-bold tracking-wide">dielli</button>
+                    <div className="absolute inset-y-16 inset-x-20 z-20 flex justify-around">
+                        <button type="button" className="bg-white text-black w-full whitespace-normal opacity-80 uppercase font-bold tracking-wide">optike</button>
                     </div>
                 </a>
                 </Link>
@@ -58,10 +60,11 @@ function Main() {
                         alt="Picture of the author"
                         layout="intrinsic"
                         width="400"
-                        height="[100%]"
+                        height="256"
                         quality="100"
+                        objectFit="cover"
                     />
-                    <div className="absolute inset-y-11 inset-x-20 flex justify-around z-20">
+                    <div className="absolute inset-y-16 inset-x-20 flex justify-around z-20">
                         <button type="button" className="bg-white text-black w-full opacity-80 uppercase font-bold tracking-wide">aksesorë</button>
                     </div>
                 </a>
@@ -77,102 +80,101 @@ function Main() {
                         alt="Picture of the author"
                         layout="intrinsic"
                         width="400"
-                        height="[100%]"
+                        height="256"
                         quality="100"
                     />
-                <div className="absolute inset-y-11 inset-x-20  flex justify-around z-20">
-                    <button type="button" className="bg-transparent w-full text-white opacity-80 uppercase font-bold tracking-wide">
+                <div className="absolute inset-y-16 inset-x-20  flex justify-around z-20">
+                    <button type="button" className="bg-white w-full text-black opacity-80 uppercase font-bold tracking-wide">
                         rezervo
                     </button>
                 </div>
                     </a>
                 </Link>
             </div>
-                </div>
+            </div>
             </div>
 
             
-            <Container className="sm:hidden md:max-w-screen-md mx-auto  md:flex md:flex-row">
-                <Row>
-                    <Col  className="relative p-0">
-                        <div className="w-full absolute inset-0 bg-gradient-to-t from-black to-black opacity-30 z-10"></div>
-                        
-                        <div  style={{ height: '500px', width:'500px'}} className="z-50">
-                        <div className="flex flex-col items-center">
-                            <Image
-                                src="/../public/images/sunglasses.jpeg"
-                                alt="Picture of the author"
-                                layout="fill"
-                                quality="100"
-                                objectFit="cover"
-                            />
-                        <button type="button" className="uppercase bg-transparent text-white font-bold border border-white py-6 px-32 absolute z-50 bottom-7 tracking-wider">
-                            dielli
-                        </button>
-                    </div>
-                        </div>
-                        
-                    </Col>
-
-                    <Col size="6" className="relative ml-10 p-0">
-                        <div className="w-full absolute inset-0 bg-gradient-to-t from-black to-black opacity-30 z-10"></div>
-                        <div  style={{ height: '500px', width:"500px"}} className="z-50" >
-                            <div className="flex flex-col items-center">    
+            <div className="container-fluid sm:hidden  md:flex md:flex-row md:justify-center overflow-hidden">
+                <div className="row flex-nowrap mx-auto md:flex md:flex-col lg:flex-row">
+                    <div className="col-md-6 lg:ml-10 p-0">
+                        <div style={{ height: '600px', width:"600px", position:"relative"}} >
+                        <div className="absolute inset-0 bg-gradient-to-t from-black to-black opacity-30 z-10"></div>
+                            <div className="flex flex-col items-center">
                                 <Image
-                                    src="/../public/images/optic.jpg"
+                                    src="/../public/images/sun.jpg"
                                     alt="Picture of the author"
                                     layout="fill"
                                     quality="100"
                                     objectFit="cover"
                                 />
-                                <button type="button" className="uppercase bg-transparent text-white font-bold border border-white py-6 px-32 absolute z-50 bottom-7 tracking-wider">
-                                    optike
-                                </button>
+                                <div className="button-before absolute uppercase font-bold tracking-wider bottom-11 z-20">
+                                    <a href="#">dielli</a>
+                                </div>
                             </div>
                         </div>
-                    </Col>
-                </Row>
-            </Container>
+                    </div>
 
-            <Container className="sm:hidden md:max-w-screen-md mx-auto mt-9 md:flex md:flex-row">
-                <Row>
-                    <Col  className="relative p-0">
+                    <div className="col-md-6  lg:mr-10 mt-10 lg:mt-0 p-0">
+                        <div  style={{ height: '600px', width:'600px', position: 'relative'}}>
                         <div className="w-full absolute inset-0 bg-gradient-to-t from-black to-black opacity-30 z-10"></div>
-                        <div  style={{ height: '500px', width:'500px'}} className="z-50">
                             <div className="flex flex-col items-center">
                                 <Image
-                                    src="/../public/images/accessor.jpg"
+                                    src="/../public/images/optike.jpg"
                                     alt="Picture of the author"
                                     layout="fill"
                                     quality="100"
+                                    objectFit="cover"
+                                    
                                 />
-                                <button type="button" className="uppercase bg-transparent text-white font-bold border border-white py-6 px-32 absolute z-50 bottom-7 tracking-wider">
-                                    aksesorë
-                                </button>
+                                <div className="button-before absolute uppercase font-bold tracking-wider bottom-11 z-20">
+                                    <a href="#">optike</a>
+                                </div>
                             </div>
                         </div>
-                    </Col>
+                    </div>
+                </div>
+            </div>
 
-                <Col size="6" className="relative ml-10 p-0">
-                    <div className="w-full absolute inset-0 bg-gradient-to-t from-black to-black opacity-30 z-10 "></div>
-                    <div  style={{ height: '500px', width:"500px", position: "relative"}} className="z-40" >
-                    <div className="flex flex-col items-center">
-                        <Image
-                            src="/../public/images/calendar.jpg"
-                            alt="Picture of the author"
-                            layout="fill"
-                            quality="100"
-                            
-                        />
-                        <button type="button" className="uppercase bg-transparent text-white font-bold border border-white py-6 px-32 absolute z-50 bottom-7 tracking-wider">
-                            rezervo 
-                        </button>
-                    </div>
-                    </div>
-                </Col>
+            <div className="container-fluid sm:hidden  md:flex md:flex-row md:justify-center mt-10 overflow-hidden">
+                <div className="row flex-nowrap mx-auto md:flex md:flex-col lg:flex-row">
+                <div className="col-md-6 lg:ml-10 p-0">
                 
-                </Row>
-            </Container>
+                    <div  style={{ height: '600px', width:"600px", position: "relative"}}>
+                    <div className="w-full absolute inset-0 bg-gradient-to-t from-black to-black opacity-30 z-10"></div>
+                        <div className="flex flex-col items-center">
+                            <Image
+                                src="/../public/images/accessor.jpg"
+                                alt="Picture of the author"
+                                layout="fill"
+                            />
+                            <div className="button-before uppercase font-bold tracking-wider absolute bottom-11 z-20">
+                                <a href="#">aksesorë</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="col-md-6 lg:mr-10 md:mt-10 lg:mt-0 p-0">
+                    <div  style={{ height: '600px', width:"600px", position: "relative"}}>
+                        <div className=" absolute inset-0 bg-gradient-to-t from-black to-black opacity-30 z-10"></div>
+                            <div className="flex flex-col items-center">
+                                <Image
+                                    src="/../public/images/calendar.jpg"
+                                    alt="Picture of the author"
+                                    layout="fill"
+                                    quality="100"
+                                    
+                                />
+                                <div className="button-before absolute uppercase font-bold tracking-wider bottom-11 z-20">
+                                    <a href="#">rezervo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
         </>
     )
 }

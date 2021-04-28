@@ -18,12 +18,12 @@ export const Navbar = () => {
     return (
     
       <>
-      <div className="flex md:justify-between justify-center bg-blue-500 sm:text-center text-white text-xs tracking-widest uppercase py-4 px-12">
-        <p className="hidden md:block">Cool Vision Tetovo</p>
+      <div className="flex md:justify-between justify-center items-center bg-blue-500 sm:text-center text-white text-xs tracking-widest uppercase py-4 px-12">
+        <p className="hidden md:block my-auto ">Cool Vision Tetovo</p>
         <p className="md:mr-32 m-0">Original Eyewear Since 1995</p>
-        <p className="hidden md:block">EN</p>
+        <p className="hidden md:block my-auto">EN</p>
       </div>
-      <nav className='flex items-center justify-between  bg-gray-100 py-2 px-12'>
+      <nav className='flex items-center bg-blue30 justify-between  py-2 px-12'>
         <button type="button" className="block lg:hidden  focus:outline-none" onClick={handleClick}>
           <svg className="h-6 w-6 fill-current " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               {isOpen && (
@@ -35,19 +35,19 @@ export const Navbar = () => {
           </svg>
         </button>
         
-        <div className="flex flex-row hidden lg:block flex-2 text-blue-500 tracking-widest uppercase text-sm"> 
-          <Link href="/">
-            <a className="items-center mr-5">
+        <div className="flex flex-row hidden lg:block flex-2 text-black  tracking-widest uppercase text-sm"> 
+          <Link href="../pages/optike.js">
+            <a className="hover:text-blue-500 text-black  items-center  mr-5 hover:no-underline ">
               Optike
             </a>
           </Link>
-          <Link href="/">
-            <a className="items-center mr-5">
+          <Link href="../pages/dielli.js">
+            <a className="hover:text-blue-500 text-black items-center mr-5 hover:no-underline">
               Dielli
             </a>
           </Link>
-          <Link href="/">
-            <a className="items-center mr-5">
+          <Link href="../pages/aksesorë.js">
+            <a className="hover:text-blue-500 text-black items-center  mr-5 hover:no-underline">
               Aksesore
             </a>
           </Link> 
@@ -67,18 +67,21 @@ export const Navbar = () => {
         </div>  
         
         <div className="flex-2 hidden lg:inline-block  text-blue-500 text-right tracking-widest uppercase text-sm">
-          <Link href="/" className="">
-            <a className="items-center mr-5 ">
+          <Link href="../pages/kontakr.js" className="">
+            <a className="hover:text-blue-500 text-black items-center  mr-5 hover:no-underline">
               Kontakt
             </a>
           </Link>
-          <Link href="/">
-            <a className="items-center">
+          <Link href="../pages/rezervo.js">
+            <a className="hover:text-blue-500 text-black items-center hover:no-underline">
               Rezervo
             </a>
           </Link>
         </div>
-        <ImLocation className="block lg:inline-block text-blue-500"/>
+        
+                <a><ImLocation className="block lg:inline-block text-blue-500 hover:text-blue-900 ml-7 cursor-pointer"/></a>
+       
+        
       </nav>
 
       <div className={`${  isOpen ? "block" : "hidden" } lg:hidden`}>
