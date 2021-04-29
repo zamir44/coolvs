@@ -36,11 +36,11 @@ export const Navbar = () => {
         </button>
         
         <div className="flex flex-row hidden lg:block flex-2 text-black  tracking-widest uppercase text-sm"> 
-          <Link href="../pages/optike.js">
+          
             <a className="hover:text-blue-500 text-black  items-center  mr-5 hover:no-underline ">
               Optike
             </a>
-          </Link>
+          
           <Link href="../pages/dielli.js">
             <a className="hover:text-blue-500 text-black items-center mr-5 hover:no-underline">
               Dielli

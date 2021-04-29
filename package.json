@@ -19,6 +19,7 @@
     "browserslist": "^4.16.4",
     "caniuse-lite": "^1.0.30001214",
     "next": "^10.1.4-canary.11",
+    "node": "^16.0.0",
     "postcss": "^8.2.1",
     "postcss-cli": "^8.3.1",
     "react": "17.0.1",
@@ -27,6 +28,8 @@
     "react-dom": "17.0.1",
     "react-icons": "^4.2.0",
     "react-transition-group": "^1.2.1",
+    "sass": "^1.32.12",
+    "swiper": "^6.5.8",
     "tailwindcss": "^2.0.2"
   },
   "devDependencies": {

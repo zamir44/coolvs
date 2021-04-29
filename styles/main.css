@@ -29,3 +29,21 @@
   text-decoration: none;
 }
 
+
+
+.user-photo {
+  border-radius: 45px;
+  -webkit-border-radius: 45px;
+  -moz-border-radius: 45px;
+  -ms-border-radius: 45px;
+  -o-border-radius: 45px;
+  width: 80px;
+}
+
+.user-testimonial {
+  font-size: large;
+}
+
+.swiper-button-prev {
+  margin-left: 2rem;
+}

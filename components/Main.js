@@ -8,7 +8,7 @@ function Main() {
             
 
             <div className="mx-auto py-10">
-                <p className="text-center text-lg my-20">Optike, Dielli, Aksesorw</p>
+                <p className="text-center text-lg my-20 uppercase tracking-widest font-semibold">Optike, Dielli, Aksesorë</p>
                 <div className="md:hidden">
                 <div className="w-full max-w-max mx-auto relative ">
                     <Link href="/">

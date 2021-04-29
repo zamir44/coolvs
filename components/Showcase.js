@@ -1,24 +1,32 @@
+import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Col, Container, Row } from "react-bootstrap";
 
+import 'swiper/swiper-bundle.css'
+
+
 const Showcase = () => {
+    
+
     return (
         <>
+        
+
             <div className="container max-w-6x">
             <div className="container mt-20 p-0">
-                <p className="text-xl text-center font-extrabold">Të reja</p>
+                <p className="text-xl text-center font-semibold uppercase tracking-widest">syze dielli të reja</p>
                 <div className="row py-10 mx-auto md:flex md:flex-col items-center lg:flex-row">
                     <div className="col-md-6 text-left p-0 flex flex-col">
                         <div className="text-center lg:flex lg:flex-col">
                         <div className="lg:order-10 lg:mt-12 lg:text-left">
-                        <Image
-                        src="/../public/images/Round-Eyeglasses-Transparent-Image.png"
-                        alt="Round Eyeglasses"
-                        layout="intrinsic"
-                        width="350"
-                        height="170"
-                        />
+                            <Image
+                            src="/../public/images/Round-Eyeglasses-Transparent-Image.png"
+                            alt="Round Eyeglasses"
+                            layout="intrinsic"
+                            width="350"
+                            height="170"
+                            />
                         </div>
                             
                         
@@ -61,13 +69,13 @@ const Showcase = () => {
                             
                         </div>
                         <div className="col-md-6 text-center mt-20 lg:mt-0 ">
-                                <Image
-                                src="/../public/images/accessories.jpg"
-                                alt="Round Eyeglasses"
-                                layout="intrinsic"
-                                width="350"
-                                height="250"
-                                />
+                            <Image
+                            src="/../public/images/accessories.jpg"
+                            alt="Round Eyeglasses"
+                            layout="intrinsic"
+                            width="350"
+                            height="250"
+                            />
                         </div>
                     </div>
                 </div>
