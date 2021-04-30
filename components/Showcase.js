@@ -2,7 +2,6 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Col, Container, Row } from "react-bootstrap";
-
 import 'swiper/swiper-bundle.css'
 
 
@@ -11,9 +10,7 @@ const Showcase = () => {
 
     return (
         <>
-        
-
-            <div className="container max-w-6x">
+        <div className="container max-w-6x">
             <div className="container mt-20 p-0">
                 <p className="text-xl text-center font-semibold uppercase tracking-widest">syze dielli të reja</p>
                 <div className="row py-10 mx-auto md:flex md:flex-col items-center lg:flex-row">

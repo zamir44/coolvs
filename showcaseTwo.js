@@ -1,6 +1,4 @@
-import Image from 'next/image'
-
-const showcase = [
+const showcaseTwo = [
     {   id: 1,
         width: 390,
         height: 180,
@@ -12,22 +10,29 @@ const showcase = [
         width: 390,
         height: 180,
         src: '/../public/showcase/Guess-GU6952-91B.jpg',
-        description: 'syze dielli per qafira',
+        description: 'syze dielli per djem dhe cucka',
     },
     {   id: 3,
         width: 390,
         height: 180,
         src: '/../public/showcase/Guess-GU6952-91B.jpg',
-        description: 'syze dielli per qafira',
+        description: 'syze dielli per djem dhe cucka',
     },
     {   id: 4,
         width: 390,
         height: 180,
         src: '/../public/showcase/Guess-GU6952-91B.jpg',
-        description: 'syze dielli per qafira',
+        description: 'syze dielli per djem dhe cucka',
     },
+    {   id: 5,
+        width: 390,
+        height: 180,
+        src: '/../public/showcase/Guess-GU6952-91B.jpg',
+        description: 'syze dielli per djem dhe cucka',
+    },
+    
 ] 
 
 
 
-export default showcase
+export default showcaseTwo
