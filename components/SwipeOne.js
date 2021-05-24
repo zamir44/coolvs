@@ -1,0 +1,70 @@
+import React from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+import SwiperCore, { Navigation} from 'swiper';
+import { Swiper, SwiperSlide} from 'swiper/react';
+import swiperOne from '../swiperOne';
+import "../styles/hajde.css"
+
+
+
+SwiperCore.use([Navigation]);
+
+
+const SwipeOne = () => {
+    return (
+        <>
+        <div className="mb-32">
+            <p className="text-xl md:text-2xl uppercase text-center tracking-widest">të reja</p>
+        </div>
+    <Swiper
+        className="hajde"
+        spaceBetween={30}
+        slidesPerView = {1}
+        navigation 
+        onSlideChange={() => console.log('slide change')}
+        onSwiper={(swiper) => console.log(swiper)}
+        loop = "true"
+        breakpoints = {{
+            // when window width is <= 499px
+            499: {
+                slidesPerView: 2,
+                spaceBetweenSlides: 30
+            },
+            // when window width is <= 999px
+            999: {
+                slidesPerView: 3,
+                spaceBetweenSlides: 40
+            } 
+        }}
+    >
+
+    {swiperOne.map(show => (
+        <SwiperSlide  className="slide" key={show.id}>
+                <div className="slide-content text-center">
+                    <div className="user-image flex justify-center">
+                        <Link href="/carouselSlider">
+                            <a>
+                                <Image 
+                                    src={show.src} 
+                                    height={show.height}
+                                    width={show.width} 
+                                    className="user-photo uppercase"
+                                    layout = "intrinsic"
+                                />
+                            </a>
+                        </Link>
+                            
+                    </div>
+                    <div className="uppercase text-sm tracking-wider mt-10">
+                        {show.description}
+                    </div>
+                </div>
+            </SwiperSlide>
+        ))}
+    </Swiper>
+        </>
+    )
+}
+
+export default SwipeOne

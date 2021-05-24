@@ -44,7 +44,27 @@
   font-size: large;
 }
 
-.swiper-button-prev {
-  margin-left: 2rem;
+
+@media (max-width: 442px) {
+ .swiper-button-prev:after {
+    display: none;
+ }
+
+ .swiper-container {
+   max-width: 90%;
+ }
 }
+
+@media (min-width: 640px) {
+  .swiper-slide.swiper-slide  {
+    /* and finally the 4 column layout */
+    width: 25%;
+}}
+
+.mySwiper2 .swiper-container {
+  width: 100%!important;
+}
+
+
+
 

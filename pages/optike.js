@@ -3,9 +3,9 @@ import Image from 'next/image'
 
 const optike = () => {
     return (
-        <div>
+        <>
             
-        </div>
+        </>
     )
 }
 

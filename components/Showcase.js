@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 import Image from 'next/image'
 import { Col, Container, Row } from "react-bootstrap";
 import 'swiper/swiper-bundle.css'
@@ -18,11 +17,11 @@ const Showcase = () => {
                         <div className="text-center lg:flex lg:flex-col">
                         <div className="lg:order-10 lg:mt-12 lg:text-left">
                             <Image
-                            src="/../public/images/Round-Eyeglasses-Transparent-Image.png"
-                            alt="Round Eyeglasses"
-                            layout="intrinsic"
-                            width="350"
-                            height="170"
+                                src="/../public/images/Round-Eyeglasses-Transparent-Image.png"
+                                alt="Round Eyeglasses"
+                                layout="intrinsic"
+                                width="350"
+                                height="170"
                             />
                         </div>
                             
@@ -67,7 +66,7 @@ const Showcase = () => {
                         </div>
                         <div className="col-md-6 text-center mt-20 lg:mt-0 ">
                             <Image
-                            src="/../public/images/accessories.jpg"
+                            src="/images/accessories.jpg"
                             alt="Round Eyeglasses"
                             layout="intrinsic"
                             width="350"

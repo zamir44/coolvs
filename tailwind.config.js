@@ -7,13 +7,13 @@ module.exports = {
       flex: {
         2: '1 0 0',
         3: '1 1 50%',
+        4: '0 0 35%'
       },
-      colors: {
-        cyan: '#406fbc',
-      },
-      backgroundColor: {
-        blue30: '#eaf2ff',
+      flexGrow: {
+        3: '3',
       }
+      
+      
     },
   },
   plugins: [],

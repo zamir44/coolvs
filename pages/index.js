@@ -1,14 +1,20 @@
+import 'bootstrap/dist/css/bootstrap.min.css'
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import Main from '../components/Main'
 import Showcase from '../components/Showcase'
 import Footer from '../components/Footer'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import Swipe from '../components/Swipe'
+import SwipeOne from '../components/SwipeOne'
+import Brands from '../components/Brands'
+import SwipeTwo from '../components/SwipeTwo'
+import History from "../components/History"
+import CarouselSlider from "./carouselSlider"
+
 
 export default function Home() {
   return (
-    <div>
+    <div> 
+    
       <Head>
         <title>Create Next App</title>
         <link rel='icon' href='/favicon.ico' />
@@ -17,8 +23,10 @@ export default function Home() {
       </Head>
       <Navbar />
       <Main />
-      <Showcase />
-      <Swipe/>
+      <SwipeOne/>
+      <Brands/>
+      <SwipeTwo />
+      <History/>
       <Footer />
     </div>
   )
