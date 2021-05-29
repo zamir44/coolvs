@@ -4,7 +4,7 @@ import Link from 'next/link'
 import SwiperCore, { Navigation} from 'swiper';
 import { Swiper, SwiperSlide} from 'swiper/react';
 import swiperOne from '../swiperOne';
-import "../styles/hajde.css"
+
 
 
 
@@ -15,7 +15,7 @@ const SwipeOne = () => {
     return (
         <>
         <div className="mb-32">
-            <p className="text-xl md:text-2xl uppercase text-center tracking-widest">të reja</p>
+            <p className="text-2xl md:text-3xl lg:text-4xl uppercase text-center tracking-widest">të reja</p>
         </div>
     <Swiper
         className="hajde"

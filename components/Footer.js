@@ -9,26 +9,27 @@ import {AiTwotoneCalendar} from 'react-icons/ai'
 const Footer = () => {
     return (
         <>
-            <div className="bg-blue-500 flex flex-wrap text-white">
-            <div className="p-10 md:order-3 md:flex-1 flex">
-                <div className="mx-auto ">
-                    <ul className="md:flex-1">
-                    <li className="lg:text-xl text-lg font-semibold mb-3 leading-8">Lokacioni</li>
-                        <ul className="text-sm lg:text-base flex flex-row items-center pl-0">
-                            <li><AiOutlineClockCircle className="text-base lg:text-lg mr-4"/></li>
-                            <li>Hapur prej 10:00 - 22:00</li>
-                        </ul>            
-                        <ul className="text-sm lg:text-base lg:mt-2 flex flex-row items-center leading-8 pl-0">
-                            <li><AiTwotoneCalendar className="text-base lg:text-lg mr-4"/></li>
-                            <li>Hënë - Diell</li>
+        <footer className="bg-blue-500 pb-8">
+            <div className=" flex flex-wrap text-white">
+                <div className="p-10 md:order-3 md:flex-1 flex">
+                    <div className="mx-auto ">
+                        <ul className="md:flex-1">
+                        <li className="lg:text-xl text-lg font-semibold mb-3 leading-8">Lokacioni</li>
+                            <ul className="text-sm lg:text-base flex flex-row items-center pl-0">
+                                <li><AiOutlineClockCircle className="text-base lg:text-lg mr-4"/></li>
+                                <li>Hapur prej 10:00 - 22:00</li>
+                            </ul>            
+                            <ul className="text-sm lg:text-base lg:mt-2 flex flex-row items-center leading-8 pl-0">
+                                <li><AiTwotoneCalendar className="text-base lg:text-lg mr-4"/></li>
+                                <li>Hënë - Diell</li>
+                            </ul>
+                            <ul className="text-sm lg:text-base flex lg:mt-2 flex-row items-center leading-8 pl-0">
+                                <li><FiPhone className="text-base lg:text-lg mr-4"/></li>
+                                <li className=""><a href="tel: [389] 75 30 20 50" className="hover:text-black text-white">[389] 75 30 20 50</a></li>
+                            </ul>                      
                         </ul>
-                        <ul className="text-sm lg:text-base flex lg:mt-2 flex-row items-center leading-8 pl-0">
-                            <li><FiPhone className="text-base lg:text-lg mr-4"/></li>
-                            <li className=""><a href="tel: [389] 75 30 20 50" className="hover:text-blue-500 text-white">[389] 75 30 20 50</a></li>
-                        </ul>                      
-                    </ul>
+                    </div>
                 </div>
-            </div>
 
             <div className="md:flex-1 md:order-2 flex justify-center p-10">
                 <ul className="mx-auto lg:text-lg text-sm leading-8">
@@ -48,14 +49,15 @@ const Footer = () => {
                 <li className="text-lg lg:text-xl font-semibold mb-3">Informata</li>            
                 <li className="">Cool Vision është një kompani që ekziston
                 dhe operon në fushën e optikës që nga viti 2001</li>            
-                <ul className="text-sm lg:text-base flex flex-row items-center mt-4 pl-0">
-                    <li className="text-xs"><AiOutlineCopyright /></li>
-                    <li className="ml-1">All rights reserved.</li>
-                </ul>
-                <p className="leading-none">Cool Vision Company</p>               
             </ul>
-            </div>
-        </>
+        </div>
+        <ul className="text-sm text-black opacity-80 lg:text-base flex flex-row items-center mb-0 pl-10 ml-7">
+            <li className="text-xs"><AiOutlineCopyright /></li>
+            <li className="ml-1">All rights reserved. Cool Vision Company</li>
+        </ul>
+        </footer>
+            </>
+
     )
 }
 

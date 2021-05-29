@@ -1,26 +1,40 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import  React, { useState } from 'react'
+import {useRouter} from 'next/router'
 import { ImLocation } from 'react-icons/im'
 import { Transition } from "@headlessui/react"
+import useTranslation from 'next-translate/useTranslation'
 
 
 
 export const Navbar = () => {
   const [isOpen, setisOpen] = React.useState(false);
+  const router = useRouter(); 
+  let { t } = useTranslation()
 
 
   function handleClick() {
     setisOpen(!isOpen);
   }
 
+
     return (
     
       <>
-      <div className="flex md:justify-between justify-center items-center bg-blue-500 sm:text-center text-white text-xs tracking-widest uppercase py-4 px-12">
+      <div className="flex  md:justify-between justify-center items-center bg-blue-500 sm:text-center text-white text-xs tracking-widest uppercase py-4 px-12">
         <p className="hidden lg:block my-auto flex-1 text-left">Cool Vision Tetovo</p>
         <p className="m-0 flex-1 text-center">Original Eyewear Since 1995</p>
-        <p className="hidden lg:block my-auto flex-4 text-right">EN</p>
+        <ul className="my-auto flex flex-row flex-4 justify-end hidden lg:flex">
+        {router.locales.map((locale) => (
+          <li key={locale}>
+            <Link href={router.asPath} locale={locale}>
+              <a>{locale}</a>
+            </Link>
+            <span>|</span>
+          </li>
+          ))}
+        </ul>
       </div>
       <nav className='flex items-center bg-blue30 justify-between py-2 px-12'>
         <button type="button" className="block lg:hidden  focus:outline-none" onClick={handleClick}>
@@ -37,17 +51,17 @@ export const Navbar = () => {
         <div className="flex-1 flex-row hidden lg:block  text-black  tracking-widest uppercase text-sm"> 
           <Link href="/">
             <a className="hover:text-blue-500 text-black items-center mr-5 no-underline ">
-              Optike
+            optike
             </a>
           </Link>
           <Link href="/syzet/dielli">
             <a className="hover:text-blue-500 text-black items-center mr-5 no-underline">
-              Dielli
+              {t("common: menu1")}
             </a>
           </Link>
           <Link href="/">
             <a className="hover:text-blue-500 text-black items-center mr-5 no-underline">
-              Aksesore
+              Aksesorë
             </a>
           </Link> 
         </div>
@@ -56,7 +70,7 @@ export const Navbar = () => {
           <Link href="/">
             <a>
               <Image
-                src="/logo.jpg"
+                src="/Layer 1.png"
                 alt="Picture of the author"
                 width={200}
                 height={70}
@@ -79,7 +93,7 @@ export const Navbar = () => {
         </div>
         <Link href="https://www.google.com/maps/@41.7966481,20.9149102,15z">
           <a className="pl-0 ml-0">
-            <ImLocation className="block lg:inline-block pl-0 text-blue-500 hover:text-blue-900 md:ml-7 cursor-pointer"/>
+            <ImLocation className="block lg:inline-block pl-0 text-blue-500 hover:text-blue-900 md:ml-3 cursor-pointer"/>
           </a>
         </Link>
       </nav>
@@ -100,29 +114,12 @@ export const Navbar = () => {
           
           <Link href="/"><li className="p-3 mt-20 ml-4 border-b w-4/5 border-gray-100 border-opacity-40"><a href="/" className="no-underline text-white">Optike</a></li></Link>
           <Link href="/"><li className="p-3 ml-4 border-b w-4/5 border-gray-100 border-opacity-30"><a className="no-underline text-white">Dielli</a></li></Link>
-          <Link href="/"><li className="p-3 ml-4 border-b w-4/5 border-gray-100 border-opacity-30"><a className="no-underline text-white">Aksesorw</a></li></Link>
+          <Link href="/"><li className="p-3 ml-4 border-b w-4/5 border-gray-100 border-opacity-30"><a className="no-underline text-white">Aksesorë</a></li></Link>
           <Link href="/"><li className="p-3 ml-4 border-b w-4/5 border-gray-100 border-opacity-30"><a className="no-underline text-white">Kontakt</a></li></Link>
           <Link href="/"><li className="p-3 ml-4 border-b w-4/5 border-gray-100 border-opacity-30"><a className="no-underline text-white">Rezervo</a></li></Link>
         </ul>
       </div>
-      <div className="hidden md:block relative z-10">
-          <Image
-            src="/images/SLIDER-mpjn-FINAL_2000x.jpg"
-            alt="Picture of the author"
-            height={900}
-            width={2000}
-            objectFit="cover"
-          />
-      </div>
-      <div className="md:hidden">
-        <Image
-          src="/images/hero-mobile.jpg"
-          alt="Picture of the author"
-          layout="intrinsic"
-          height="650"
-          width="750"
-        />
-      </div>
+      
       <div>
       </div>
     </>
@@ -131,3 +128,20 @@ export const Navbar = () => {
   }
 
   export default Navbar
+
+  const getLocale = (locale) => {
+    switch (locale) {
+      case 'mk':
+        return (
+          <p>MK</p>
+        )
+      case 'sq':
+        return (
+          <p>SQ</p>
+        )
+      default:
+        return (
+          <p>SQ</p>
+        )
+    }
+  }

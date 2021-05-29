@@ -3,7 +3,7 @@ import Image from 'next/image'
 import SwiperCore, { Navigation} from 'swiper';
 import { Swiper, SwiperSlide} from 'swiper/react';
 import swiperTwo from '../swiperTwo';
-import "../styles/hajde.css"
+
 
 
 SwiperCore.use([Navigation]);
@@ -12,7 +12,7 @@ const SwipeTwo = () => {
     return (
         <>
         <div className="mb-32">
-            <p className="text-xl md:text-2xl uppercase text-center tracking-widest">trendi</p>
+            <p className="text-2xl md:text-3xl lg:text-4xl uppercase text-center tracking-widest">trendi</p>
         </div>
         <Swiper
 

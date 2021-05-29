@@ -1,13 +1,32 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Col, Container, Row } from "react-bootstrap";
+
 
 function Main() {
     return (
         <>
+
+        <div className="hidden md:block relative z-10">
+            <Image
+                src="/images/SLIDER-mpjn-FINAL_2000x.jpg"
+                alt="Picture of the author"
+                height={900}
+                width={2000}
+                objectFit="cover"
+            />
+        </div>
+        <div className="md:hidden">
+            <Image
+                src="/images/hero-mobile.jpg"
+                alt="Picture of the author"
+                layout="intrinsic"
+                height="650"
+                width="750"
+            />
+        </div>
             
-            <div className="mx-auto md:pb-0 pb-24 lg:pb-12">
-                <p className="text-center text-xl md:text-2xl my-32 uppercase tracking-widest">Optike, Dielli, Aksesorë</p>
+            <div className="mx-auto md:pb-0 pb-24">
+                <p className="text-center text-2xl md:text-3xl lg:text-4xl my-36 uppercase tracking-widest">Optike, Dielli, Aksesorë, Rezervime</p>
                 <div className="md:hidden">
                     <div className="w-full max-w-max mx-auto relative ">
                         <Link href="/">
@@ -111,7 +130,9 @@ function Main() {
                                 objectFit="cover"
                             />
                                 <div className="button-before absolute uppercase font-bold tracking-wider bottom-11 z-20">
-                                    <a href="#">dielli</a>
+                                    <Link href="/syzet/dielli">
+                                        <a classsName="">dielli</a>
+                                    </Link>
                                 </div>
                                 </div>
                             </div>
@@ -128,7 +149,9 @@ function Main() {
                                     objectFit="cover"
                                 />
                                 <div className="button-before absolute uppercase font-bold tracking-wider bottom-11 z-20">
-                                    <a href="#">optike</a>
+                                    <Link href="/syzet/optike">
+                                        <a className="no-underline">optike</a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -140,7 +163,7 @@ function Main() {
                 <div className="row flex-nowrap mx-auto md:flex md:flex-col lg:flex-row">
                     <div className="col-md-6 p-0 mb-10 lg:mr-3 lg:mb-0">
                         <div  style={{ height: '600px', width:"500px", position: "relative"}}>
-                            <div className="w-full absolute inset-0 bg-gradient-to-t from-black to-black opacity-30 z-10"></div>
+                            <div className="w-full absolute inset-0 bg-gradient-to-t from-black to-black opacity-40 z-10"></div>
                             <div className="flex flex-col items-center">
                                 <Image
                                     src="/images/accessor.jpg"
@@ -148,7 +171,9 @@ function Main() {
                                     layout="fill"
                                 />
                                 <div className="button-before uppercase font-bold tracking-wider absolute bottom-11 z-20">
-                                    <a href="#">aksesorë</a>
+                                    <Link href="/syzet/aksesorë">
+                                        <a className="no-underline">aksesorë</a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -164,7 +189,9 @@ function Main() {
                                     layout="fill"
                                 />
                                 <div className="button-before absolute uppercase font-bold tracking-wider bottom-11 z-20">
-                                    <a href="#">rezervo</a>
+                                    <Link href="/syzet/rezervo">
+                                        <a className="no-underline">rezervo</a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

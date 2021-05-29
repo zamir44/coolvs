@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
 import "swiper/components/navigation/navigation.min.css"
 import "swiper/components/thumbs/thumbs.min.css"
-import "./Carousel.css"
+
 
 
 SwiperCore.use([Navigation,Thumbs]);
