@@ -1,35 +1,39 @@
 import Layout from '../../components/layout/Layout'
 import Image from 'next/image'
 import Link from 'next/link'
+import useTranslation from 'next-translate/useTranslation'
 
 
 const dielli = () => {
+
+    let { t } = useTranslation()
+
     return (
         <>
             <Layout>
             <div className="relative z-10">
             <div className="absolute inset-0 bg-gradient-to-t from-black to-black opacity-30 z-20"></div>
+            <div className="hero-syze relative">
                 <Image
                     src="/images/maxresdefault.jpg"
                     alt="Picture of the author"
-                    height={900}
-                    width={2000}
                     objectFit="cover"
-                    layout="responsive"
+                    layout="fill"
                 />
             </div>
-                <div className="w-3/5 mt-24 ml-12">
-                    <h4 className="uppercase">syze dielli</h4>
-                    <p>Cool Vision syzet kombinojnë syze dielli të qëndrueshme me estetikën urbane.
-                    Stilet e lehta janë importuar në zemër të Tetovës. Zgjidhni syzet e diellit nga koleksioni ynë i gjerë!
-                    </p>
-                </div>
+                
+            </div>
 
                 <div className="px-20 mx-auto">
-                    <div className="grid grid-cols-3 gap-12">
+                <div className="lg:w-3/5 my-24 text-center ml-0 lg:text-left lg:ml-20">
+                    <p className="text-gray-800 uppercase text-2xl lg:text-4xl tracking-wider mb-5">{t('dielli:dielliTitle')}</p>
+                    <p className="text-gray-500 text-sm md:text-base lg:text-lg">{t('dielli:dielliDescription')}
+                    </p>
+                </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
                     <Link href="/">
                         <a>
-                            <figure className=" text-center relative">
+                            <figure className="text-center relative">
                                 <img src="/showcase/Guess-GU7695-S-66B-d000.jpg" className="" alt="Picture of the author"/>
                                 <img src="/showcase/Guess-GU7695-S-66B.jpg" className="absolute inset-0 opacity-0 hover:opacity-100" alt="Picture of the author"/>
                             </figure>
@@ -38,7 +42,7 @@ const dielli = () => {
                     
                         
                         <figure className="mx-auto relative">
-                            <img src="/showcase/sgue-g025411-m109916-bi-3.jpg" className="" alt="Picture of the author"/>
+                            <img src="/showcase/sgue-g025411-m109916-bi-3.jpg" alt="Picture of the author"/>
                             <img src="/showcase/sgue-g025411-m109916-bi-1.jpg" className="absolute inset-0 opacity-0 hover:opacity-100" alt="Picture of the author"/>
                         </figure>
                         <figure>

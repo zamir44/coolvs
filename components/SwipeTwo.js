@@ -1,18 +1,22 @@
 import React from 'react'
 import Image from 'next/image'
-import SwiperCore, { Navigation} from 'swiper';
-import { Swiper, SwiperSlide} from 'swiper/react';
-import swiperTwo from '../swiperTwo';
+import SwiperCore, { Navigation} from 'swiper'
+import { Swiper, SwiperSlide} from 'swiper/react'
+import swiperTwo from '../swiperTwo'
+import useTranslation from 'next-translate/useTranslation'
 
 
 
 SwiperCore.use([Navigation]);
 
 const SwipeTwo = () => {
+
+    let { t } = useTranslation()
+
     return (
         <>
         <div className="mb-32">
-            <p className="text-2xl md:text-3xl lg:text-4xl uppercase text-center tracking-widest">trendi</p>
+            <p className="text-gray-800 text-2xl md:text-3xl lg:text-4xl uppercase text-center tracking-widest">{t('common:title3')}</p>
         </div>
         <Swiper
 

@@ -1,9 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import SwiperCore, { Navigation} from 'swiper';
-import { Swiper, SwiperSlide} from 'swiper/react';
-import swiperOne from '../swiperOne';
+import SwiperCore, { Navigation} from 'swiper'
+import { Swiper, SwiperSlide} from 'swiper/react'
+import swiperOne from '../swiperOne'
+import useTranslation from 'next-translate/useTranslation'
 
 
 
@@ -12,10 +13,13 @@ SwiperCore.use([Navigation]);
 
 
 const SwipeOne = () => {
+
+    let { t } = useTranslation()
+
     return (
         <>
         <div className="mb-32">
-            <p className="text-2xl md:text-3xl lg:text-4xl uppercase text-center tracking-widest">të reja</p>
+            <p className="text-gray-800 text-2xl md:text-3xl lg:text-4xl uppercase text-center tracking-widest">{t('common:title2')}</p>
         </div>
     <Swiper
         className="hajde"

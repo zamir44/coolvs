@@ -12,7 +12,7 @@
     "prod:build": "NODE_ENV=production yarn run build:css && yarn run build"
   },
   "dependencies": {
-    "@headlessui/react": "^1.0.0",
+    "@headlessui/react": "^1.2.0",
     "@types/react-transition-group": "^4.4.1",
     "@zeit/next-css": "^1.0.1",
     "bootstrap": "^5.0.0-beta3",
@@ -22,7 +22,7 @@
     "components": "^0.1.0",
     "next": "^10.1.4-canary.11",
     "next-i18next": "^8.3.0",
-    "next-translate": "^1.0.7",
+    "next-translate": "^1.0.6",
     "node": "^16.0.0",
     "popper.js": "^1.16.1",
     "postcss-cli": "^8.3.1",
@@ -38,14 +38,17 @@
     "swiper": "^6.5.8"
   },
   "devDependencies": {
-    "autoprefixer": "^9.8.6",
+    "autoprefixer": "^10.2.6",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.1",
-    "postcss": "^7.0.35",
+    "postcss": "^8.3.0",
     "tailwind-bootstrap-grid": "^3.3.0",
     "tailwind-styled-components": "^1.0.7",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.2",
+    "tailwindcss": "^2.1.2",
     "webpack": "^4.44.0",
     "webpack-cli": "^4.7.0"
+  },
+  "peerDependencies": {
+    "postcss": "^8.0.0"
   }
 }

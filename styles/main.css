@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+
+html {
+  scroll-behavior: smooth;
+}
+
 .button-before a {
   background-color: transparent;
   color: #fff;
@@ -66,6 +71,15 @@
   width: 100%!important;
 }
 
+.hero-syze {
+  height: 450px;
+}
+
+@media (min-width: 1024px) {
+  .hero-syze {
+    height: 550px;
+  }
+}
 
 
 

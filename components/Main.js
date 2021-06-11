@@ -1,8 +1,13 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import useTranslation from 'next-translate/useTranslation'
+
 
 
 function Main() {
+
+    let { t } = useTranslation()
+
     return (
         <>
 
@@ -10,10 +15,14 @@ function Main() {
             <Image
                 src="/images/SLIDER-mpjn-FINAL_2000x.jpg"
                 alt="Picture of the author"
-                height={900}
+                height={850}
                 width={2000}
                 objectFit="cover"
             />
+            <div className="absolute hidden md:block inset-y-3/4 inset-x-10 xl:inset-x-20">
+                <p className="text-2xl lg:text-3xl text-gray-300 uppercase tracking-wide">{t('common:heroTitle')}</p>
+                <p className="text-sm lg:text-base text-gray-300 uppercase mt-1">{t('common:heroDescription')}</p>
+            </div>
         </div>
         <div className="md:hidden">
             <Image
@@ -26,7 +35,7 @@ function Main() {
         </div>
             
             <div className="mx-auto md:pb-0 pb-24">
-                <p className="text-center text-2xl md:text-3xl lg:text-4xl my-36 uppercase tracking-widest">Optike, Dielli, Aksesorë, Rezervime</p>
+                <p className="text-gray-800 text-center text-2xl md:text-3xl lg:text-4xl my-36 uppercase tracking-widest">{t('common:title1')}</p>
                 <div className="md:hidden">
                     <div className="w-full max-w-max mx-auto relative ">
                         <Link href="/">
@@ -43,7 +52,7 @@ function Main() {
                                 quality="100"
                             />
                             <div className="absolute inset-y-16 inset-x-20 z-20 flex justify-around">
-                                <button type="button" className="bg-white text-black w-full opacity-80 uppercase font-bold tracking-wide">dielli</button>
+                                <button type="button" className="bg-white text-black w-full opacity-80 uppercase font-bold tracking-wide">{t('common:nav1')}</button>
                             </div>
                             </a>
                         </Link>
@@ -63,7 +72,7 @@ function Main() {
                             objectFit="cover"
                         />
                         <div className="absolute inset-y-16 inset-x-20 z-20 flex justify-around">
-                            <button type="button" className="bg-white text-black w-full whitespace-normal opacity-80 uppercase font-bold tracking-wide">optike</button>
+                            <button type="button" className="bg-white text-black w-full whitespace-normal opacity-80 uppercase font-bold tracking-wide">{t('common:nav2')}</button>
                         </div>
                     </a>
                 </Link>
@@ -83,7 +92,7 @@ function Main() {
                         objectFit="cover"
                     />
                     <div className="absolute inset-y-16 inset-x-20 flex justify-around z-20">
-                        <button type="button" className="bg-white text-black w-full opacity-80 uppercase font-bold tracking-wide">aksesorë</button>
+                        <button type="button" className="bg-white text-black w-full opacity-80 uppercase font-bold tracking-wide">{t('common:nav3')}</button>
                     </div>
                 </a>
             </Link>
@@ -106,7 +115,7 @@ function Main() {
                             
                         <div className="absolute inset-y-16 inset-x-20  flex justify-around z-20">
                             <button type="button" className="bg-white w-full text-black opacity-80 uppercase font-bold tracking-wide">
-                                rezervo
+                            {t('common:nav4')}
                             </button>
                         </div>
                     </a>
@@ -131,7 +140,7 @@ function Main() {
                             />
                                 <div className="button-before absolute uppercase font-bold tracking-wider bottom-11 z-20">
                                     <Link href="/syzet/dielli">
-                                        <a classsName="">dielli</a>
+                                        <a classsName="">{t('common:nav1')}</a>
                                     </Link>
                                 </div>
                                 </div>
@@ -150,7 +159,7 @@ function Main() {
                                 />
                                 <div className="button-before absolute uppercase font-bold tracking-wider bottom-11 z-20">
                                     <Link href="/syzet/optike">
-                                        <a className="no-underline">optike</a>
+                                        <a className="no-underline">{t('common:nav2')}</a>
                                     </Link>
                                 </div>
                             </div>
@@ -172,7 +181,7 @@ function Main() {
                                 />
                                 <div className="button-before uppercase font-bold tracking-wider absolute bottom-11 z-20">
                                     <Link href="/syzet/aksesorë">
-                                        <a className="no-underline">aksesorë</a>
+                                        <a className="no-underline">{t('common:nav3')}</a>
                                     </Link>
                                 </div>
                             </div>
@@ -190,7 +199,7 @@ function Main() {
                                 />
                                 <div className="button-before absolute uppercase font-bold tracking-wider bottom-11 z-20">
                                     <Link href="/syzet/rezervo">
-                                        <a className="no-underline">rezervo</a>
+                                        <a className="no-underline">{t('common:nav4')}</a>
                                     </Link>
                                 </div>
                             </div>

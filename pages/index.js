@@ -9,6 +9,7 @@ import Brands from '../components/Brands'
 import SwipeTwo from '../components/SwipeTwo'
 import History from "../components/History"
 import CarouselSlider from "./carouselSlider"
+import Layout from "../components/layout/Layout"
 
 
 export default function Home() {
@@ -21,13 +22,13 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.gstatic.com"/>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet"></link>
       </Head>
-      <Navbar />
-      <Main />
-      <SwipeOne/>
-      <Brands/>
-      <SwipeTwo />
-      <History/>
-      <Footer />
+      <Layout>
+        <Main />
+        <SwipeOne/>
+        <Brands/>
+        <SwipeTwo />
+        <History/>
+      </Layout>
     </div>
   )
 }

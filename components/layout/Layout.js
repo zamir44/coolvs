@@ -1,12 +1,13 @@
-import  React, { useState } from 'react'
+import React, { useState } from 'react'
 import Navbar from "../Navbar"
 import Footer from "../Footer"
+import useSticky from "../../hooks/useSticky"
 
 const Layout = ({children}) => {
-
+  const { isSticky } = useSticky()
     return (
         <>
-          <Navbar />
+          <Navbar sticky={isSticky} />
           {children}
           <Footer />
         </>

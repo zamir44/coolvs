@@ -1,4 +1,10 @@
 {
     "locales": ["sq", "mk"],
-    "defaultLocale": "sq"
-}
+    "defaultLocale": "sq",
+    "pages": {
+        "*": ["common"],
+        "/syzet/optike": ["optike"],
+        "/syzet/dielli": ["dielli"]
+    }
+
+    }

@@ -21,7 +21,7 @@ const rezervo = () => {
                             <div className="flex flex-row ml-7">
                             <Link href="https://www.google.com/maps/@41.7966481,20.9149102,15z">
                                 <a className="mt-1">
-                                    <ImLocation className="text-white hover:text-blue-500 cursor-pointer"/>
+                                    <ImLocation className="text-white hover:text-blue-500 transition cursor-pointer"/>
                                 </a>
                             </Link>
                                 <div>
@@ -36,7 +36,7 @@ const rezervo = () => {
                                     <FiPhone className="text-base text-white mt-1 lg:text-lg"/>
                                     <div>
                                         <p className="text-white ml-10">Na telefononi</p>
-                                        <p className="ml-10"><a href="tel: [389] 75 30 20 50" className="hover:text-white text-blue-500">[389] 75 30 20 50</a></p>
+                                        <p className="ml-10"><a href="tel: [389] 75 30 20 50" className="hover:text-white text-blue-500 transition">[389] 75 30 20 50</a></p>
                                     </div>
                                 </div>                    
                             </div>
