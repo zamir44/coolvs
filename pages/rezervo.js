@@ -67,6 +67,7 @@ const rezervo = () => {
                         name="contact" 
                         method="post"
                         data-netlify="true"
+                        netlify
                         data-netlify-honeypot="bot-failed"
                         className="relative z-50 opacity-100 w-2/4 lg:w-full mx-auto py-28 lg:py-0"
                     >
