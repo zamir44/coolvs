@@ -65,13 +65,17 @@ const rezervo = () => {
                     />
                         <div className="absolute inset-0 bg-gradient-to-t w-full h-full from-black to-black z-20 opacity-80 lg:hidden"></div>
                     <form 
-                        name="contact" 
+                        name="contact 1" 
                         method="post"
                         data-netlify="true"
+                        data-netlify-honeypot="bot-field"
                         className="relative z-50 opacity-100 w-2/4 lg:w-full mx-auto py-28 lg:py-0"
                     >
 
-                    <input type="hidden" name="form-name" value="contact"/>
+                    <input type="hidden" name="form-name" value="contact 1"/>
+                    <div hidden>
+                        <input name="bot-field"/>
+                    </div>
                     
                         <div className="ml-0 lg:ml-16 uppercase flex flex-col">
                         <h3 className="lg:text-black text-center normal-case lg:text-2xl font-bold text-white opacity-90 text-3xl">Rezervoni Takim</h3>
