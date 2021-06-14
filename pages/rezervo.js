@@ -3,6 +3,7 @@ import { ImLocation } from 'react-icons/im'
 import {FiPhone} from 'react-icons/fi'
 import {BiEnvelope} from 'react-icons/bi'
 import Link from 'next/link'
+import React from 'react'
 
 
 const rezervo = () => {
@@ -67,7 +68,6 @@ const rezervo = () => {
                         name="contact" 
                         method="post"
                         data-netlify="true"
-                        onSubmit="submit"
                         className="relative z-50 opacity-100 w-2/4 lg:w-full mx-auto py-28 lg:py-0"
                     >
 
