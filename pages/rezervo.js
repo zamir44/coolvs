@@ -65,7 +65,8 @@ const rezervo = () => {
                         <div className="absolute inset-0 bg-gradient-to-t w-full h-full from-black to-black z-20 opacity-80 lg:hidden"></div>
                     <form 
                         name="contact" 
-                        method="POST" 
+                        method="POST"
+                        action="/rezervo" 
                         data-netlify="true"
                         data-netlify-honeypot="bot-failed"
                         className="relative z-50 opacity-100 w-2/4 lg:w-full mx-auto py-28 lg:py-0"
@@ -88,7 +89,7 @@ const rezervo = () => {
                             <p>
                             <label className="text- text-blue-500 lg:text-black">Kontakt telefoni:</label>
                             </p>
-                            <input type="email" name="email" placeholder="Numri juaj" className="py-2 pr-32 pl-5 mt-2 mb-6"/>
+                            <input type="phone" name="phone" placeholder="Numri juaj" className="py-2 pr-32 pl-5 mt-2 mb-6"/>
                             <p>
                             </p>
                             <p>
