@@ -40,8 +40,9 @@ const optike = () => {
                             <a>
                                 <img src="/showcase/vogue-VO5334-W44-54_000A.jpg" alt="Picture of the author"/>
                                 <img src="/showcase/vogue-VO5334-W44-54_030A.jpg" className="absolute inset-0 opacity-0 hover:opacity-100" alt="Picture of the author"/>
-                            </a>
-                            
+                                <div className="text-center hover:text-blue-500 uppercase">Ray Ban | Unisex</div>
+
+                                </a>
                         </Link>
                             
                         </figure>

@@ -4,7 +4,6 @@ const swiperTwo = [
         height: 180,
         src: '/showcase/ggue-g024369-m104568-bi-3.jpg',
         description: 'syze dielli per djem dhe cucka',
-        className: 'uppercase'
     },
     {   id: 2,
         width: 390,

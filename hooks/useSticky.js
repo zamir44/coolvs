@@ -5,7 +5,7 @@ function sticky() {
 
   useEffect(() => {
     const handleScroll = () => {
-      window.scrollY > 46 ? setSticky(true) : setSticky(false)
+      window.scrollY > 47 ? setSticky(true) : setSticky(false)
     }
 
     window.addEventListener('scroll', handleScroll, { passive: true })

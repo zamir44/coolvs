@@ -30,7 +30,6 @@ const SwipeOne = () => {
         onSwiper={(swiper) => console.log(swiper)}
         loop = "true"
         breakpoints = {{
-            // when window width is <= 499px
             499: {
                 slidesPerView: 2,
                 spaceBetweenSlides: 30

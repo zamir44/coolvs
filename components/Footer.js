@@ -40,11 +40,11 @@ const Footer = () => {
                 <ul className="mx-auto lg:text-lg text-sm leading-8">
                     <li className="lg:text-xl text-lg font-semibold mb-2">{t('common:socialMedia')}</li>
                         <ul className="text-small lg:text-base flex items-center flex-row pl-0">
-                            <li><a href="https://www.instagram.com/optikacoolvision/"><FaInstagram className=" lg:text-lg hover:text-white text-white mr-4 "/></a></li>
+                            <li><a href="https://www.instagram.com/optikacoolvision/"><FaInstagram className=" lg:text-lg hover:text-black transition text-white mr-4 "/></a></li>
                             <li>@optikacoolvision</li>
                         </ul>
                         <ul className="text-small pl-0 lg:mt-2 lg:text-base flex flex-row items-center">
-                            <li className=""><a href="https://www.facebook.com/OptikaCoolVisionVero3"><SiFacebook className="mr-4 lg:text-lg hover:text-white text-white"/></a></li>
+                            <li className=""><a href="https://www.facebook.com/OptikaCoolVisionVero3"><SiFacebook className="mr-4 lg:text-lg hover:text-black transiton text-white"/></a></li>
                             <li>Optika CoolVision</li>
                         </ul>
                 </ul>

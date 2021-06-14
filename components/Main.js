@@ -25,12 +25,11 @@ function Main() {
             </div>
         </div>
         <div className="md:hidden">
-            <Image
-                src="/images/hero-mobile.jpg"
-                alt="Picture of the author"
+            <Image 
+                src="/../public/images/hero-mobile.jpg"
+                height={630}
+                width={800}
                 layout="intrinsic"
-                height="650"
-                width="750"
             />
         </div>
             
@@ -140,7 +139,7 @@ function Main() {
                             />
                                 <div className="button-before absolute uppercase font-bold tracking-wider bottom-11 z-20">
                                     <Link href="/syzet/dielli">
-                                        <a classsName="">{t('common:nav1')}</a>
+                                        <a className="">{t('common:nav1')}</a>
                                     </Link>
                                 </div>
                                 </div>

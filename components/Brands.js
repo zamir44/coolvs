@@ -1,7 +1,6 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import SVG from "react-inlinesvg";
-import next from "next";
+
 
 const branditems = [
    '/svg/guess.svg',

@@ -35,8 +35,6 @@ html {
   text-decoration: none;
 }
 
-
-
 .user-photo {
   border-radius: 45px;
   -webkit-border-radius: 45px;
@@ -49,6 +47,97 @@ html {
 .user-testimonial {
   font-size: large;
 }
+
+.nav-menu {
+  left: -100%;
+  transition: 850ms;
+  -webkit-transition: 850ms;
+  -moz-transition: 850ms;
+  -ms-transition: 850ms;
+  -o-transition: 850ms;
+}
+
+.nav-menu.active {
+  left:0;
+  transition: 350ms;
+  -webkit-transition: 350ms;
+  -moz-transition: 350ms;
+  -ms-transition: 350ms;
+  -o-transition: 850ms;
+  transition-timing-function: cubic-bezier(.17,.67,.83,.67);
+}
+
+.overlay {
+  position: fixed;
+  display: none;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgba(0,0,0,0.2);
+}
+
+.overlay.active{
+  position: fixed;
+  display: block;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgba(0,0,0,0.2);
+}
+
+.hajde {
+  margin: 0 auto!important;
+}
+
+input {
+  outline: 1px solid gray;
+  opacity: 0.3;
+}
+
+textarea {
+  outline: 1px solid gray;
+  opacity: 0.3;
+}
+
+.rezervo-button a {
+  background-color: #3b82f6;
+  color: #fff;
+  padding: 0.6rem 3rem;
+  border: 1px solid transparent;
+  display: block;
+  background-image: linear-gradient(to left, #3b82f6 50%,transparent 50%,transparent);
+  background-position: 100% 0;
+  background-size: 200% 100%;
+  transition: all .25s ease-in;
+  -webkit-transition: all .25s ease-in;
+  -moz-transition: all .25s ease-in;
+  -ms-transition: all .25s ease-in;
+  -o-transition: all .25s ease-in;
+}
+
+.rezervo-button a:hover {
+  background-position: 0 0;
+  background-color: #fff;
+  opacity: 0.9;
+  color: #3b82f6;
+  border: 1px solid #3b82f6;
+  -webkit-transition: all .35s ease;
+  -o-transition: all .35s ease;
+  transition: all .35s ease;
+  text-decoration: none;
+}
+
+input, textarea  {
+  background-color: #fff;
+  opacity: .95;
+}
+
+
+
+
+
 
 
 @media (max-width: 442px) {
@@ -80,6 +169,8 @@ html {
     height: 550px;
   }
 }
+
+
 
 
 

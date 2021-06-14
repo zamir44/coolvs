@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-import { Col, Container, Row } from "react-bootstrap";
 import 'swiper/swiper-bundle.css'
 import useTranslation from 'next-translate/useTranslation'
 
