@@ -57,20 +57,22 @@ const rezervo = () => {
                     
 
                 <div className="lg:w-2/4 w-full mx-auto relative">
-                <img
-                            alt="Fotoja e rezervimeve"
-                            src="/images/DSCF8806_750x960_crop_center.webp"
-                            className="w-full h-full absolute inset-0 z-10 filter grayscale lg:hidden"
-                        />
+                    <img
+                        alt="Fotoja e rezervimeve"
+                        src="/images/DSCF8806_750x960_crop_center.webp"
+                        className="w-full h-full absolute inset-0 z-10 filter grayscale lg:hidden"
+                    />
                         <div className="absolute inset-0 bg-gradient-to-t w-full h-full from-black to-black z-20 opacity-80 lg:hidden"></div>
                     <form 
                         name="contact" 
                         method="post"
                         data-netlify="true"
                         data-netlify-honeypot="bot-failed"
+                        onSubmit="submit"
                         className="relative z-50 opacity-100 w-2/4 lg:w-full mx-auto py-28 lg:py-0"
                     >
-            
+
+                    <input type="hidden" name="form-name" value="contact"/>
                     
                         <div className="ml-0 lg:ml-16 uppercase flex flex-col">
                         <h3 className="lg:text-black text-center normal-case lg:text-2xl font-bold text-white opacity-90 text-3xl">Rezervoni Takim</h3>
